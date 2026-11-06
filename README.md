@@ -16,7 +16,7 @@ The user found the tall red hero and strong color uncomfortable. This supersedes
 
 ## Approved boutique travel-journal UI — 2026-11-07
 
-The user approved applying the generated boutique-travel-journal concept to the app, with large text, a compact header and a single-column itinerary. This defines the approved concept; the first flat-beige implementation was subsequently rejected, and the material-fidelity revision below is the current implementation standard. Use cream paper surfaces, rose-beige selections, restrained champagne borders and dark cocoa text. Date buttons are small tickets, the original cat photos sit in miniature round frames, and navigation/buttons have subtle porcelain-style highlights. Avoid bright red areas, shadows behind text, decorative text behind content, fabricated traveler portraits and staggered itinerary cards. Preserve the standalone storage/backup scripts, all itinerary data and the working map. The inline stylesheet is `#boutique-journal-style`.
+The user approved applying the generated boutique-travel-journal concept to the app, with large text, a compact header and a single-column itinerary. This defines the approved concept; the first flat-beige implementation was subsequently rejected, and both prior implementations were rejected; the clean rebuild below is the current implementation. Use cream paper surfaces, rose-beige selections, restrained champagne borders and dark cocoa text. Date buttons are small tickets, the original cat photos sit in miniature round frames, and navigation/buttons have subtle porcelain-style highlights. Avoid bright red areas, shadows behind text, decorative text behind content, fabricated traveler portraits and staggered itinerary cards. Preserve the standalone storage/backup scripts, all itinerary data and the working map. The inline stylesheet is `#boutique-journal-style`.
 
 ## Material-fidelity revision — 2026-11-07
 
@@ -25,3 +25,7 @@ The user rejected the flat beige result as unlike the concept. Restore the conce
 ## Explicit three-dimensional treatment — 2026-11-07
 
 The user requested the reference's three-dimensional quality explicitly. Use one upper-left light direction, visible paper edge thickness, rounded raised cream buttons, upper-rim highlights and soft lower shadows. Add a small pressed-down response with reduced-motion support. Keep text high contrast and large, the top header compact, and itinerary cards in one column. This replaces interpreting the earlier shadow restraint as flat styling.
+
+## Clean reference-based rebuild — 2026-11-07
+
+The user rejected both previous implementations as unlike the reference and requested a fresh design. The new `atelier-ui-style` replaces the entire prior material stylesheet instead of adding another visual patch. Schedule rendering is rebuilt around a small category medallion, balanced large title, understated metadata and quiet text actions. Keep one card per row. Use selective depth on the postage-stamp date buttons and ceramic-style navigation; paper cards stay light with subtle texture and soft edges. The header stays compact. Weather details expand on demand. Backup/restore tools are shown in the Info tab; storage error notices remain visible on every tab. Existing data and action handlers are preserved, including remove/restore, edits and maps.
