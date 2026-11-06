@@ -37,3 +37,10 @@ The user requested stronger depth matching the original stationery concept acros
 ## Approved handwriting — 2026-11-07
 
 The user requested pen handwriting like notes written on paper, then selected candidate A, Gamja Flower. Use Gamja Flower Regular for expressive headings, date numerals, itinerary/place titles and memo prose. Use LINE Seed KR Regular/Bold for time, amounts, address text, inputs and functional buttons. Maintain large visually readable type: itinerary headings 28px on mobile, memo prose 26px. At narrow phone widths keep the top header in one compact row. All fonts are embedded data URLs; the full Gamja glyph set is compressed losslessly to WOFF2 without changing glyph order or character mapping. Include the OFL licenses both in the HTML source and licenses directory. No external font requests, itinerary or storage changes.
+
+
+## Material and readability refinement — 2026-11-07
+
+Further overall art quality refinement at the user's request, retaining the approved reference and Gamja Flower. Thin paper cards now use a narrow contact edge and soft warm shadow; raised pearl navigation buttons use distinct rounded highlights; secondary controls and nested panels stay shallow. This replaces the previous uniform shadow strength across unrelated materials. Date stamps have one inner border and independent shadows. Ribbon tails appear attached beneath paper. The header rhythm and date padding are compacted without shrinking type: 28px mobile itinerary titles, 26px memo prose, 17px menu labels and 18px form inputs. Cocoa-ink controls have stronger contrast. Keep a single-column itinerary and 44px minimum functional targets. Semantic memo classes prevent handwriting styles from spilling into unrelated detail rows. No itinerary, storage, map, network policy, embedded image or font changes.
+
+Validation: 320px and 390px viewport checks, all five screens, itinerary expansion and edit dialog, and route map tile/marker rendering. These are desktop-browser responsive checks, not a physical iOS/Android device test. The active style remains `atelier-ui-style`.
