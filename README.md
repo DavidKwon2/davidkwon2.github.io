@@ -29,3 +29,7 @@ The user requested the reference's three-dimensional quality explicitly. Use one
 ## Clean reference-based rebuild — 2026-11-07
 
 The user rejected both previous implementations as unlike the reference and requested a fresh design. The new `atelier-ui-style` replaces the entire prior material stylesheet instead of adding another visual patch. Schedule rendering is rebuilt around a small category medallion, balanced large title, understated metadata and quiet text actions. Keep one card per row. Use selective depth on the postage-stamp date buttons and ceramic-style navigation; paper cards stay light with subtle texture and soft edges. The header stays compact. Weather details expand on demand. Backup/restore tools are shown in the Info tab; storage error notices remain visible on every tab. Existing data and action handlers are preserved, including remove/restore, edits and maps.
+
+## Reference-matched depth and font review — 2026-11-07
+
+The user requested stronger depth matching the original stationery concept across the app. Shared material shadows now combine a fine paper contact edge with broad warm lower-right shadows, upper-left rim light, rounded ceramic surfaces and a restrained press response. Apply the same lighting to cards, date stamps, cat frame, controls, navigation and sheets; inputs and selected recessed controls use inset shadows. Preserve font sizes, compact header and one-column layout. Font candidates are under review; the live IBM Plex Sans KR font remains until the user selects a replacement.
