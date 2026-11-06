@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data: blob: https://tile.openstreetmap.org; font-src data:; connect-src 'none'; base-uri 'none'; form-action 'none'">
 <meta name="robots" content="noindex,nofollow">
-<title>홍콩 여행</title><meta name="theme-color" content="#73509c">
+<title>홍콩 여행</title><meta name="theme-color" content="#e60028">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui}img{max-width:100%}[hidden]{display:none!important}</style>
 
 <style>
@@ -2508,6 +2508,105 @@ details.sec[open]>summary{background:var(--jade-soft)}
 .offline-dialog .offline-file-label{display:block;border:0;background:none;padding:0;min-height:0;text-align:left;margin-top:14px;cursor:default}
 .offline-dialog button:disabled{cursor:wait;opacity:1;color:var(--muted);background:var(--sunk);border-color:var(--rule)}
 @media(max-width:380px){.offline-tools{padding:0 12px}.offline-dialog{padding:16px}.offline-tools button{padding:8px 12px}}
+</style><style id="reference-art-style">
+/* Reference art direction: warm ivory, black editorial type and vermilion. */
+:root,:root[data-theme],html[data-theme]{
+ --bg:#f3f0ea;--surface:#fffdf9;--sunk:#e9e4dc;--ink:#151412;--muted:#65605a;--rule:#d9d3ca;
+ --accent:#e60028;--on-accent:#fff;--jade:#d90025;--on-jade:#fff;--jade-soft:#fce6e8;
+ --selected:#e60028;--selected-ink:#fff;--cream:#f5eee3;--gold:#b78957;--photo-wash:#ecdcd0;
+ --ok:#24663c;--warn:#875014;--focus:#b90020;--scrim:rgb(30 22 16 / .48);
+ --shadow:0 6px 22px rgb(44 30 16 / .045);--shadow-raised:0 18px 64px rgb(44 30 16 / .16);
+ --f-body:"IBM Plex Sans KR",system-ui,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+ --f-num:var(--f-body);--r:18px;
+ color-scheme:light;
+}
+body{background:var(--bg);color:var(--ink)}
+body::before{display:none}
+h1,h2,h3,.brand,.h,.btn,.tab,.daybtn,.sh .ttl,.place-card .nm,.region-card strong,.region-card b{font-weight:750;letter-spacing:-.035em}
+.top{background:rgb(243 240 234 / .97);border-bottom:1px solid var(--rule);box-shadow:none;backdrop-filter:blur(14px)}
+.brand-mark{color:var(--accent)}
+.clock b{font-weight:750;letter-spacing:-.05em}
+.screen-heading.cat-heading,
+#view[data-screen='plan']>.screen-heading.cat-heading,
+.cat-heading[data-cat='now']{
+ position:relative;isolation:isolate;overflow:hidden;min-height:230px;padding:30px;margin:0 0 28px;
+ border:0;border-radius:24px;grid-template-columns:minmax(0,1fr) 35%;gap:24px;
+ background:radial-gradient(ellipse at 7% 0%,#fca5a2 0%,transparent 58%),linear-gradient(125deg,#ef1539 0%,#e60028 68%,#a9001b 100%);
+ color:#fff;box-shadow:0 14px 32px rgb(126 20 31 / .13)
+}
+.cat-heading::before,.cat-heading::after,.cat-photo-frame::after{display:none!important}
+.screen-heading.cat-heading h1,.cat-heading[data-cat='now'] h1{
+ color:#fff;font-size:clamp(34px,5vw,52px)!important;font-weight:850;line-height:1.12;letter-spacing:-.055em
+}
+.screen-heading.cat-heading>.cat-heading-copy,
+#view[data-screen='plan']>.screen-heading.cat-heading>.cat-heading-copy{gap:22px;align-items:flex-start}
+.cat-heading .cat-signature,.cat-heading[data-cat='now'] .cat-signature{color:#fff;opacity:.9;font-weight:550}
+.cat-signature::before{background:#fff}
+.cat-heading .cat-photo-frame,.cat-heading[data-cat='now'] .cat-photo-frame{
+ width:100%;max-width:178px;height:180px;border:5px solid #fffdf9;border-radius:20px;
+ background:#fffdf9;transform:rotate(-4deg)!important;box-shadow:0 18px 24px rgb(71 0 8 / .22);overflow:hidden
+}
+.cat-heading .cat-photo{border-radius:15px}
+.cat-heading .btn,.cat-heading .btn.ink{
+ color:#fff;background:rgb(255 255 255 / .08);border:1px solid rgb(255 255 255 / .75);border-radius:999px;box-shadow:none
+}
+.btn{border-radius:14px;font-weight:700;min-height:48px;transition:transform .16s ease,background .16s ease,box-shadow .16s ease}
+.btn.ink,.btn.red{background:var(--accent);border-color:var(--accent);color:#fff}
+button:active:not(:disabled){transform:scale(.97)}
+button:focus-visible,a:focus-visible{outline:3px solid var(--focus);outline-offset:4px}
+.btn:disabled,.btn.ink:disabled,.btn.red:disabled{color:#756e66;background:#e7e0d7;border-color:#d3cbc0;opacity:1}
+.tabs{width:min(580px,calc(100% - 24px));padding:7px;border:1px solid var(--rule);border-radius:24px;background:#fffdf9f5;box-shadow:0 8px 30px rgb(45 30 20 / .1)}
+.tab{color:#5f5a53;font-weight:700;transition:background .18s ease,color .18s ease}
+.tab[aria-current='page']{background:#fbe3e6;color:#d00024;box-shadow:none;border-radius:17px}
+.tab[aria-current='page'] svg{color:#e60028}
+.days{padding:0;gap:10px;background:transparent}
+.daybtn{background:transparent;border:1px solid var(--rule);border-radius:18px;color:#6b645c;min-height:100px}
+.daybtn b{font-weight:850;letter-spacing:-.06em}
+.daybtn[aria-pressed='true']{background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:0 6px 15px rgb(207 0 35 / .15)}
+.daybtn[aria-pressed='true'] small{color:#fff}
+.dayhead h2{font-weight:850;font-size:clamp(23px,3vw,30px);line-height:1.4;letter-spacing:-.05em}
+.plan-view-switch{background:#e9e4dc;border:0;border-radius:15px;padding:5px}
+.plan-view-switch button{font-weight:750}
+.plan-view-switch button[aria-pressed='true']{color:#171411;background:#fffdf9;box-shadow:0 2px 6px #3322110c;border-radius:11px}
+.card,.mini,.bars,.exl,details.sec,.place-card,.region-card{border-color:var(--rule);box-shadow:var(--shadow);border-radius:20px}
+.stop .sh{border-color:var(--rule);border-radius:19px 19px 0 0;background:var(--surface)}
+.stop .sh .ttl{font-weight:750;letter-spacing:-.035em}
+.stop[data-category='food']:not(.is-now):not(.is-done):not(.is-hidden) .sh{background:var(--surface)}
+.stop-actions{background:var(--surface);border-radius:0 0 19px 19px}
+.stop-actions .btn{background:#f1ece5;color:#29231e;border-color:transparent}
+.stop-actions .remove-stop{background:#fffdf9;color:#c60022;border-color:var(--rule)}
+.stop .t,.sum .big,.dday b{font-weight:850}
+.rail::before{background:#d5c8bc}
+.stop.is-now .sh{background:#fff4f3;border-color:#e60028}
+.tag{border-radius:7px;font-weight:600}
+.cats button,.explore-tools>.cats button,.place-card .nm,.place-card .place-price,details.sec>summary{font-weight:700}
+.region-card[aria-pressed='true']{background:#fff2f1;color:#b90020;border-color:#e60028;box-shadow:inset 0 0 0 1px #e60028}
+.location-panel,.checklist-card{background:#f3eee6}
+.sum{background:radial-gradient(ellipse at top left,#fb8f94,transparent 65%),linear-gradient(125deg,#ee163a,#c50022);color:#fff;border:0}
+.sum .lbl,.sum>.muted,.sum .settle .muted{color:#fff;opacity:.9}
+.sum .settle{border-color:#ffffff55}
+.route-marker span{background:#e60028;color:#fff;border:2px solid #fff}
+.route-stop.is-selected{background:#fff0f0;border-color:#e60028}
+.route-stop-text strong{font-weight:750}
+.route-map-panel{border-radius:20px}
+.offline-tools button,.offline-dialog button{font-weight:650;border-radius:12px}
+@media(hover:hover) and (pointer:fine){
+ .btn:hover:not(:disabled){box-shadow:0 5px 13px #39211712}
+ .tab:hover:not([aria-current='page']){background:#f1ece5;color:#201a16}
+ .daybtn:hover:not([aria-pressed='true']){background:#fffdf9}
+}
+@media(max-width:700px){
+ .screen-heading.cat-heading,#view[data-screen='plan']>.screen-heading.cat-heading,.cat-heading[data-cat='now']{
+  min-height:202px;padding:25px 21px;gap:12px;grid-template-columns:minmax(0,1fr) 34%;border-radius:21px;margin-bottom:23px
+ }
+ .screen-heading.cat-heading h1{font-size:38px!important}
+ .cat-heading .cat-photo-frame,.cat-heading[data-cat='now'] .cat-photo-frame{height:138px;border-width:4px;border-radius:16px}
+ .cat-heading .cat-photo{border-radius:12px}
+ .daybtn{min-height:95px;border-radius:16px}
+ .days{gap:7px}
+ .stop .sh{padding:21px 18px}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 </style></head><body>
 <noscript>이 파일은 JavaScript를 지원하는 브라우저에서 열어 주세요.</noscript>
 <script>/* @preserve
