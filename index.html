@@ -1,6 +1,6 @@
 <!doctype html><html lang="ko"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data: blob:; font-src data:; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data: blob: https://tile.openstreetmap.org; font-src data:; connect-src 'none'; base-uri 'none'; form-action 'none'">
 <meta name="robots" content="noindex,nofollow">
 <title>홍콩 여행</title><meta name="theme-color" content="#73509c">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui}img{max-width:100%}[hidden]{display:none!important}</style>
@@ -3371,7 +3371,15 @@ function catHeading(tab, title, action=''){
         const map = state.map = L.map(canvas, {scrollWheelZoom: false, zoomControl: false, attributionControl: true});
         L.control.zoom({position: 'topright', zoomInTitle: '지도 확대', zoomOutTitle: '지도 축소'}).addTo(map);
         map.attributionControl.setPrefix('<a href="https://leafletjs.com" target="_blank" rel="noopener">Leaflet</a>');
-        status.textContent = '배경 지도 없음 · 방문 순서만 표시';
+        const layer = state.layer = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 19, keepBuffer: 0, updateWhenIdle: true, referrerPolicy: 'strict-origin-when-cross-origin',
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors'
+        });
+        let failed = 0;
+        layer.on('loading', () => { failed = 0; });
+        layer.on('tileerror', () => { failed++; status.textContent = '배경 지도 연결 실패 · 방문 순서 표시'; retry.hidden = false; });
+        layer.on('load', () => { if (!failed) { status.textContent = ''; retry.hidden = true; } });
+        layer.addTo(map);
         model.segments.forEach(segment => L.polyline([[segment.from.point.lat, segment.from.point.lng], [segment.to.point.lat, segment.to.point.lng]], {color:'#bb5038', weight: 4, opacity: .85, dashArray: '7 8', interactive: false}).addTo(map));
         const markerLayer = L.layerGroup().addTo(map);
         function drawMarkers() {
